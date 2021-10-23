@@ -11,7 +11,7 @@ Se asume que se contará con los siguientes equipos y software necesarios:
 * Dispositivo con conexión a internet
 * Navegador web con soporte a html5(Chrome, Safari, EDGE, etc)
 
-** Prototipo **
+Prototipo
 
 [prototipo.pdf](https://github.com/AllanCastro24/Administracion-de-proyectos-2/files/7402066/prototipo.pdf)
 
