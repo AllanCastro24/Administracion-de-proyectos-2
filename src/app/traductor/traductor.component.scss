@@ -1,0 +1,36 @@
+:host{ 
+    display:flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+.mat-card{
+    border-radius: 30px;
+}
+label{
+    margin-left: 30px;
+}
+
+mat-card-content{
+    display: flex;
+    justify-content: center;
+}
+
+.mat-flat-button{
+    margin-left: 40px;
+}
+
+.mat-raised-button{
+    background-color: #32A6DC;
+    margin-left: 150px;
+    height: 60px;
+}
+
+mat-form-field{
+    margin-left: 25px;
+    min-width: 400px;
+}
+
+textarea{
+    height: 150px;
+    width: 200px;
+}
