@@ -11,10 +11,12 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiccionarioComponent } from './diccionario/diccionario.component';
 import { SesionModule } from './sesion/sesion.module';
+import { CrearUserComponent } from './crear-user/crear-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CrearUserComponent
   ],
   imports: [
     BrowserModule,
