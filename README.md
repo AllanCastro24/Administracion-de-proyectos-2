@@ -22,3 +22,17 @@ Prototipo
 ![image](https://user-images.githubusercontent.com/66056538/138538046-0d93fb6f-e1db-4e5f-9edb-eb3019bdb350.png)
 
 ![image](https://user-images.githubusercontent.com/66056538/138538060-e8bf6b27-2cae-4c1f-9d39-c957c4188807.png)
+
+Desarrollo:
+
+FrontEnd, hecho con Angular-CLI en visual studio Code
+
+* Para levantar el ambiente, ejecutar el comando: ng serve
+
+BackEnd, hecho con PHP en XAMPP
+
+* Para levantar el ambiente, activar el servidor apache de XAMPP
+
+Base de datos, hecho en MySQL con PHPMyAdmin en XAMPP
+
+* Para utilizar, levantar el servidor MySQL de XAMPP
