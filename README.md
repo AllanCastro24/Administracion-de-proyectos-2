@@ -33,6 +33,10 @@ BackEnd, hecho con PHP en XAMPP
 
 * Para levantar el ambiente, activar el servidor apache de XAMPP
 
+Para utilizarlo, Levantar el servidor PHP y meter la carpeta Backend en la ruta C:/XAMPP/htdocs/ y quedaría C:/XAMPP/htdocs/backend
+
 Base de datos, hecho en MySQL con PHPMyAdmin en XAMPP
 
 * Para utilizar, levantar el servidor MySQL de XAMPP
+
+Para utilizarla, levantar el servidor Apache y despues MySQL
