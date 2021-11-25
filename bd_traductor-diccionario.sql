@@ -26,7 +26,7 @@ CREATE TABLE `dialectos` (
   `Id_dialecto` int NOT NULL AUTO_INCREMENT,
   `Dialecto` varchar(45) NOT NULL,
   PRIMARY KEY (`Id_dialecto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `diccionario` (
   PRIMARY KEY (`Id_diccionario`),
   KEY `id_dialecto_idx` (`Id_dialecto`),
   CONSTRAINT `id_dialecto` FOREIGN KEY (`Id_dialecto`) REFERENCES `dialectos` (`Id_dialecto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `usuarios` (
   `Usuario` varchar(60) NOT NULL,
   `Contraseña` varchar(45) NOT NULL,
   PRIMARY KEY (`Id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
