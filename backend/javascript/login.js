@@ -18,7 +18,5 @@ function mostrarContrasena(){
  }
 
  function login(){
-     alert("Bienvenid@ ")
-     window.open('principal_docente.html', '_self')
      
  }

@@ -102,3 +102,11 @@ footer{
     background:black;
     color: white;
 }
+
+.error {
+    text-align: center;
+	width: 98.7%;
+	padding: 12px;
+	background-color: rgb(40, 71, 250);
+	color: #fff
+}
