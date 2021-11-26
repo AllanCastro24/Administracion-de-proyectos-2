@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(img/banner.jpeg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:20px;
+    width:100%;
+    background:black;
+    color: white;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+}
+
+.menu ul li {
+    background-color: rgb(255, 243, 243);
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 10px 10px 20px;
+}
+
+.menu ul li a:hover {
+    background: #000;
+    border-left: 10px solid #333;
+    color: #fff;
+}
+
+.titulo div{
+    background-color: rgb(255, 243, 243);
+    height: 98.6%;
+    width: 10%;
+}

@@ -103,10 +103,11 @@ footer{
     color: white;
 }
 
-.error {
+.error{
     text-align: center;
-	width: 98.7%;
+	width: 98.4%;
 	padding: 12px;
+    margin-top: 600px;
 	background-color: rgb(40, 71, 250);
 	color: #fff
 }
