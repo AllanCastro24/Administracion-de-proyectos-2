@@ -44,8 +44,26 @@ footer{
     color: #fff;
 }
 
-.titulo div{
-    background-color: rgb(255, 243, 243);
-    height: 98.6%;
-    width: 10%;
+.titulo{
+    width: 100%;
+    max-width: 1500px;
+    background-color: #fff;
+    height: 50px;
+    margin: auto;
+    padding: auto;
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 34px;
+    transition: all 400ms ease;
+}
+
+p{
+    font-family:helvetica;
+    color: #000;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

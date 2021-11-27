@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div class="titulo">
-		<h5>Administrador de base de datos para Diccionario - Traductor</h5>
-	</div>
+    <header >
+		<p class="titulo">Administrador de base de datos para Diccionario - Traductor</h5>
+	</header>
 
     <div class="menu">
 		<h5>Navegación</h5>
