@@ -6,6 +6,7 @@ html {
 
 body {
   margin: 0;
+  background: url(img/banner.jpeg) no-repeat center top;
 }
 
 article,
