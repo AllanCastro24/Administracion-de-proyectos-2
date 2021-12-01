@@ -170,14 +170,25 @@
 										<th>Activo</th>
 									</tr>
 								</thead>
+			
 								<tbody>
+									<?php
+									include('db.php');
+									$sql="SELECT * from usuarios";
+									$resul=mysqli_query($conexion,$sql);
+
+									while($mostrar=mysqli_fetch_array($resul)){
+										?>		
 									<tr name='registros_usuario'>
-										<td>1</td>
-										<td>admin</td>
-										<td>admin</td>
-										<td>admin@pruebas.com</td>
-										<td>S</td>
+										<td><?php echo $mostrar['Id_usuario'] ?></td>
+										<td><?php echo $mostrar['Usuario'] ?></td>
+										<td><?php echo $mostrar['Contraseña'] ?></td>
+										<td><?php echo $mostrar['email'] ?></td>
+										<td><?php echo $mostrar['usuario_activo'] ?></td>
 									</tr>
+									<?php
+										}
+									?>
 								</tbody>
 							</table>
 						</div>
