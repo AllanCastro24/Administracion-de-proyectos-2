@@ -1,15 +1,11 @@
 body {
-  background: url(img/banner.jpeg) no-repeat center top;
+  background: #f9f9f9;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
   font-size: 1.6em;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333; }
-
-.background{
-  background: url(img/banner.jpeg) no-repeat center top;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
@@ -290,7 +286,7 @@ select:focus {
     margin-bottom: 20px; }
 
 .card {
-  background: rgb(104, 103, 103);
+  background: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   margin-bottom: 2.2rem; }
   .card .canvas-wrapper {
@@ -470,7 +466,7 @@ select:focus {
     width: 50%;
     max-width: 50%; }
   .navbar .site-title {
-    font-size: 20px !important;
+    font-size: 18px !important;
     padding-top: 5px; }
 
   .row.grid-responsive {
