@@ -60,34 +60,61 @@
 			<!--Idiomas-->
 			<h5 class="mt-2">Lenguajes</h5><a class="anchor" name="idiomas"></a>
 			<div class="row grid-responsive mt-1">
+				
+				<div class="column ">
+					<div class="card">
+						<div class="card-title">
+							<h3>Agregar Lenguajes</h3>
+						</div>
+						<div class="card-block">
+							<form action="insertar_dialecto.php" method="post">
+								<fieldset>
+									<label for="nameField">Nombre</label>
+									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+									<input type="submit" class="button" >
+								</fieldset>
+							</form>
+						</div>
+					</div>
+						
+				</div>
 				<div class="column">
 					<div class="card">
 						<div class="card-title">
 							<h2 class="float-left">Lenguajes</h2>
-							<div class="badge float-right">Cantidad de palabras</div>
+							<!--<div class="badge float-right">Cantidad de palabras</div>-->
 							<!--<div class="badge background-success float-right mr-1">5 Complete</div>-->
 							<div class="clearfix"></div>
 						</div>
 						<div class="card-block progress-bars">
-							<h5 class="float-left mt-1">Maya</h5>
-							<p class="float-right text-small text-muted mt-1">3</p>
-							<div class="clearfix"></div>
-							<div class="progress-bar">
-								<div class="progress background-primary" style="width: 3%;"></div>
-							</div>
-							<h5 class="float-left mt-1">Yoreme</h5>
-							<p class="float-right text-small text-muted mt-1">0</p>
-							<div class="clearfix"></div>
-							<div class="progress-bar">
-								<div class="progress background-primary" style="width: 0%;"></div>
-							</div>
-							<h5 class="float-left mt-1">Cahita</h5>
-							<p class="float-right text-small text-muted mt-1">0</p>
-							<div class="clearfix"></div>
-							<div class="progress-bar">
-								<div class="progress background-primary" style="width: 0%;"></div>
-							</div>
-							
+							<table>
+									<thead>
+										<tr>
+											<th>Clave Idioma</th>
+											<th>Idioma</th>
+											<th>Mostrar</th>
+											<th>Acciones</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+											include('db.php');
+											$sql="SELECT * from dialectos";
+											$resul=mysqli_query($conexion,$sql);
+
+											while($mostrar=mysqli_fetch_array($resul)){
+												?>
+										<tr>
+											<td><?php echo $mostrar['Id_dialecto'] ?></td>
+											<td><?php echo $mostrar['Dialecto'] ?></td>
+											<td><?php echo $mostrar['mostrar'] ?></td>
+											<td><a class="button button-outline" href="mostrar_dialecto.php?id=<?php echo $mostrar['Id_dialecto']?>">Mostrar</a> <a class="button button-outline" href="ocultar_dialecto.php?id=<?php echo $mostrar['Id_dialecto']?>">Ocultar</a></td>
+										</tr>
+										<?php
+											}
+										?>
+									</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -168,6 +195,7 @@
 										<th>Contraseña</th>
 										<th>Correo</th>
 										<th>Activo</th>
+										<th>Acción</th>
 									</tr>
 								</thead>
 			
@@ -185,6 +213,7 @@
 										<td><?php echo $mostrar['Contraseña'] ?></td>
 										<td><?php echo $mostrar['email'] ?></td>
 										<td><?php echo $mostrar['usuario_activo'] ?></td>
+										<td><button class="button button-outline">Modificar</button></td>
 									</tr>
 									<?php
 										}
@@ -221,51 +250,34 @@
 							<table>
 								<thead>
 									<tr>
+										<th>Clave Idioma</th>
 										<th>Idioma</th>
 										<th>Palabras</th>
-										<th>Traducciones</th>
 										<th>Acciones</th>
 									</tr>
 								</thead>
 								<tbody>
+									<?php
+										include('db.php');
+										$sql="SELECT * from dialectos WHERE mostrar = 'S'";
+										$resul=mysqli_query($conexion,$sql);
+
+										while($mostrar=mysqli_fetch_array($resul)){
+											?>
 									<tr>
-										<td>Maya</td>
-										<td>3</td>
-										<td>3</td>
+										<td><?php echo $mostrar['Id_dialecto'] ?></td>
+										<td><?php echo $mostrar['Dialecto'] ?></td>
+											<?php
+												//$sql2='SELECT COUNT(Palabra) from diccionario WHERE Id_dialecto = $mostrar["Id_dialecto"]';
+												//$result=$conexion->pdo->query($sql2);
+												
+											?>
+										<td><?php  ?></td>
 										<td><button class="button button-outline">Mostrar palabras</button></td>
 									</tr>
-									<tr>
-										<td>Yoreme</td>
-										<td>0</td>
-										<td>0</td>
-										<td><button class="button button-outline">Mostrar palabras</button></td>
-									</tr>
-									<tr>
-										<td>Cahita</td>
-										<td>0</td>
-										<td>0</td>
-										<td><button class="button button-outline">Mostrar palabras</button></td>
-									</tr>
-									<!--
-									<tr>
-										<td>Jonathan Smith</td>
-										<td>Designer</td>
-										<td>30</td>
-										<td>London, UK</td>
-									</tr>
-									<tr>
-										<td>Kelly Johnson</td>
-										<td>UX Developer</td>
-										<td>25</td>
-										<td>Los Angeles, CA</td>
-									</tr>
-									<tr>
-										<td>Sam Davidson</td>
-										<td>Programmer</td>
-										<td>28</td>
-										<td>Philadelphia, PA</td>
-									</tr>
-									-->
+									<?php
+										}
+									?>
 								</tbody>
 							</table>
 						</div>

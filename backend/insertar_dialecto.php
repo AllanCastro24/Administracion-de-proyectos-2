@@ -1,11 +1,9 @@
 <?php 
-    $usuario=$_POST['user'];
-    $contraseña=$_POST['pass'];
-    $email=$_POST['mail'];
+    $nombre=$_POST['nombre'];
     $estado='S';
     include('db.php');
-    if($usuario != null && $contraseña != null && $email != null){
-        $consulta="INSERT INTO usuarios (Usuario,Contraseña,email,usuario_activo) VALUES ('$usuario','$contraseña','$email','$estado')";
+    if($nombre != null){
+        $consulta="INSERT INTO dialectos (Dialecto,mostrar) VALUES ('$nombre','$estado')";
         //mysqli_query($conexion,$consulta);
         if ($conexion->query($consulta)===true){
             ?>
@@ -16,7 +14,7 @@
             <?php
             
         }else{
-            die("Error al insertar al usuario" . $conexion->error);
+            die("Error al insertar el dialecto" . $conexion->error);
         }
     }else{
         echo "<script>alert('Aun faltan datos por llenar');</script>";
