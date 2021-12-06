@@ -156,7 +156,7 @@
 				</div>
 			</div>
 			
-			<!--Usuarioss-->
+			<!--Usuarios-->
 			<h5 class="mt-2">Usuarios</h5><a class="anchor" name="forms"></a>
 			<div class="row grid-responsive">
 				<div class="column ">
@@ -238,7 +238,7 @@
 			</div>
 			-->
 			
-			<!--Tables-->
+			<!--Diccionario-->
 			<h5 class="mt-2">Diccionario</h5><a class="anchor" name="tables"></a>
 			<div class="row grid-responsive">
 				<div class="column ">
@@ -258,17 +258,17 @@
 
 											while($mostrar=mysqli_fetch_array($resul)){
 										?>
-										<option value="<?php echo $mostrar['Id_dialecto'] ?>"><?php echo $mostrar['Dialecto'] ?></option>
+										<option value="<?php echo $mostrar['Id_dialecto'] ?>" name="id_dialecto"><?php echo $mostrar['Dialecto'] ?></option>
 									    <?php
 										}
 										?>
 									</select>
 									
 									<label for="nameField">Palabra</label>
-									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+									<input type="text" placeholder="Nombre de usuario" id="nameField" name="palabra">
 
 									<label for="nameField">Traducción</label>
-									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+									<input type="text" placeholder="Nombre de usuario" id="nameField" name="traduccion">
 
 									<input type="submit" class="button">
 								</fieldset>
@@ -314,50 +314,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<!--Grid
-			<h5 class="mt-2">Grid</h5><a class="anchor" name="grid"></a>
-			<div class="grid-example mt-2">
-				<div class="row">
-					<div class="column column-10">10%</div>
-				</div>
-				<div class="row">
-					<div class="column column-20">20%</div>
-				</div>
-				<div class="row">
-					<div class="column column-25">25%</div>
-				</div>
-				<div class="row">
-					
-					<div class="column column-33">33%</div>
-				</div>
-				<div class="row">
-					<div class="column column-40">40%</div>
-				</div>
-				<div class="row">
-					<div class="column column-50">50%</div>
-				</div>
-				<div class="row">
-					<div class="column column-60">60%</div>
-				</div>
-				<div class="row">
-					
-					<div class="column column-67">67%</div>
-				</div>
-				<div class="row">
-					<div class="column column-75">75%</div>
-				</div>
-				<div class="row">
-					<div class="column column-80">80%</div>
-				</div>
-				<div class="row">
-					<div class="column column-90">90%</div>
-				</div>
-				<div class="row">
-					<div class="column">100%</div>
-				</div>
-			</div>
-			-->
 		</section>
 	</div>
 	
