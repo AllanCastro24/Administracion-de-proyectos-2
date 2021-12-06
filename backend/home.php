@@ -244,6 +244,41 @@
 				<div class="column ">
 					<div class="card">
 						<div class="card-title">
+							<h3>Agregar Palabra</h3>
+						</div>
+						<div class="card-block">
+							<form action="insertar_palabra.php" method="post">
+								<fieldset>
+									<label for="nameField">Idioma</label>
+									<select name="combo">
+										<?php
+											include('db.php');
+											$sql="SELECT * from dialectos WHERE mostrar = 'S'";
+											$resul=mysqli_query($conexion,$sql);
+
+											while($mostrar=mysqli_fetch_array($resul)){
+										?>
+										<option value="<?php echo $mostrar['Id_dialecto'] ?>"><?php echo $mostrar['Dialecto'] ?></option>
+									    <?php
+										}
+										?>
+									</select>
+									
+									<label for="nameField">Palabra</label>
+									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+
+									<label for="nameField">Traducción</label>
+									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+
+									<input type="submit" class="button">
+								</fieldset>
+							</form>
+						</div>
+					</div>	
+				</div>
+				<div class="column ">
+					<div class="card">
+						<div class="card-title">
 							<h3>Idiomas</h3>
 						</div>
 						<div class="card-block">
@@ -267,13 +302,8 @@
 									<tr>
 										<td><?php echo $mostrar['Id_dialecto'] ?></td>
 										<td><?php echo $mostrar['Dialecto'] ?></td>
-											<?php
-												//$sql2='SELECT COUNT(Palabra) from diccionario WHERE Id_dialecto = $mostrar["Id_dialecto"]';
-												//$result=$conexion->pdo->query($sql2);
-												
-											?>
-										<td><?php  ?></td>
-										<td><button class="button button-outline">Mostrar palabras</button></td>
+										<td></td>
+										<td><a class="button button-outline" href="ingresar_palabra.php?id=<?php echo $mostrar['Id_dialecto']?>" >Agregar palabras</a></td>
 									</tr>
 									<?php
 										}
