@@ -13,6 +13,16 @@
 	<link rel="stylesheet" href="css/milligram.min.css">
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="css/styles.css">
+	<!-- Bootstrap CSS
+	<link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+	-->
+	<!-- Bootstrap JS 
+	<script src="bootstrap\js\bootstrap.css"></script>
+	-->
+	<!-- JQuery 
+	<script src="javascript/jquery-3.6.0.js"></script>
+	-->
+	<link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -265,10 +275,10 @@
 									</select>
 									
 									<label for="nameField">Palabra</label>
-									<input type="text" placeholder="Nombre de usuario" id="nameField" name="palabra">
+									<input type="text" placeholder="Palabra en dialecto" id="nameField" name="palabra">
 
 									<label for="nameField">Traducción</label>
-									<input type="text" placeholder="Nombre de usuario" id="nameField" name="traduccion">
+									<input type="text" placeholder="Palaba en español" id="nameField" name="traduccion">
 
 									<input type="submit" class="button">
 								</fieldset>
@@ -303,7 +313,7 @@
 										<td><?php echo $mostrar['Id_dialecto'] ?></td>
 										<td><?php echo $mostrar['Dialecto'] ?></td>
 										<td></td>
-										<td><a class="button button-outline" href="ingresar_palabra.php?id=<?php echo $mostrar['Id_dialecto']?>" >Agregar palabras</a></td>
+										<td><input type="checkbox" id="btn-modal"><label for="btn-modal" class="lbl-modal">Mostrar diccionario</label></td>
 									</tr>
 									<?php
 										}
@@ -317,28 +327,26 @@
 		</section>
 	</div>
 	
+
+	<!-- Modal <button class="button button-outline" >Mostrar diccionario</button> -->
+	
+	
+	<div class="modal">
+
+		<div class="contenedor">
+
+			<header>Mostrar palabras</header>
+			<label for="btn-modal">X</label>
+			<div class="contenido">
+
+			</div>
+
+		</div>
+
+	</div>
+
 	<script src="javascript/chart.min.js"></script>
-	<script src="javascript/chart-data.js"></script>
-	<script>
-	window.onload = function () {
-		var chart1 = document.getElementById("line-chart").getContext("2d");
-		window.myLine = new Chart(chart1).Line(lineChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-		var chart2 = document.getElementById("bar-chart").getContext("2d");
-		window.myBar = new Chart(chart2).Bar(barChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-		
-		
-	};
-	</script>			
+	<script src="javascript/chart-data.js"></script>		
 </div>
 </body>
 </html> 

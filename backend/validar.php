@@ -13,7 +13,7 @@
     $filas=mysqli_num_rows($resultado);
 
     if($filas){
-        header("location:home.php");
+        header("location:home.php?user=$usuario");
     }
     else{
         ?>
