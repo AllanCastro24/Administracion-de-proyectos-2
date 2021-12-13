@@ -15,4 +15,8 @@ export class ApiService {
     getIdiomas(){
         return this.http.get<any>(this.baseUrl)
     }
+    
+    getDiccionario(){
+        return this.http.get<any>(this.baseUrl)
+    }
 }

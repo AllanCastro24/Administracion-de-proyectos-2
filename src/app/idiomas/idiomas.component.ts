@@ -12,7 +12,7 @@ export class IdiomasComponent implements OnInit {
   idiomas: Idiomas[] = []
   constructor(public apiService:ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {//Acá se manda llamar el getIdiomas para el listado de idiomas
     this.getIdiomas();
   }
 
@@ -23,4 +23,5 @@ export class IdiomasComponent implements OnInit {
     })
   }
 
+  
 }
