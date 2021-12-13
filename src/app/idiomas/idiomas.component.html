@@ -4,9 +4,9 @@
   <mat-card-title>SELECCIONA EL DIALECTO</mat-card-title>
   <mat-card-content>
 <form>
-    <p>
-      <mat-form-field>
-        <button mat-raised-button color="primary">Maya</button>
+    <p *ngFor="let idiomas of idiomas; index as i">
+      <mat-form-field >
+        <a mat-raised-button color="primary">{{idiomas.dialecto}}</a>
       </mat-form-field>
     </p>
     
@@ -18,4 +18,3 @@
 
   </mat-card-content>
 </mat-card>
- 
