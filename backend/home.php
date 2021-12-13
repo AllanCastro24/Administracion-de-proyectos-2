@@ -13,16 +13,18 @@
 	<link rel="stylesheet" href="css/milligram.min.css">
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="css/styles.css">
-	<!-- Bootstrap CSS
-	<link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+
+	<!-- Bootstrap CSS Se comentaron por que choca con las otras librerías de diseño
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	-->
 	<!-- Bootstrap JS 
-	<script src="bootstrap\js\bootstrap.css"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	-->
-	<!-- JQuery 
-	<script src="javascript/jquery-3.6.0.js"></script>
-	-->
-	<link rel="stylesheet" href="css/home.css">
+
+	<!-- JQuery -->
+	<script src="javascript/jquery-3.6.0.min.js"></script>
+	<!-- Plotly -->
+	<script src="javascript/plotly-2.6.3.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
 		<div class="row">
 			<div class="column column-30 col-site-title"><a href="#" class="site-title float-left">Diccionario - Traductor</a></div>
 			<div class="column column-40 col-search">
-				<input type="text" name="" value="" placeholder="Buscar..." />
+				<!--<input type="text" name="" value="" placeholder="Buscar..." />-->
 			</div>
 			<div class="column column-30">
 				<div class="user-section"><a href="#">
@@ -50,7 +52,6 @@
 			<ul>
 				<li><a href="#"></em> Inicio</a></li>
 				<li><a href="#idiomas"> Lenguajes</a></li>
-				<li><a href="#dashboard"> Dashboard</a></li>
 				<li><a href="#forms"> Usuarios</a></li>
 				<li><a href="#tables"> Diccionario</a></li>				
 				<li><a href="index.php"> Cerrar sesión</a></li>
@@ -79,8 +80,8 @@
 						<div class="card-block">
 							<form action="insertar_dialecto.php" method="post">
 								<fieldset>
-									<label for="nameField">Nombre</label>
-									<input type="text" placeholder="Nombre de usuario" id="nameField" name="nombre">
+									<label for="">Nombre</label>
+									<input type="text" placeholder="Nombre del dialecto" id="nameField" name="nombre">
 									<input type="submit" class="button" >
 								</fieldset>
 							</form>
@@ -92,8 +93,6 @@
 					<div class="card">
 						<div class="card-title">
 							<h2 class="float-left">Lenguajes</h2>
-							<!--<div class="badge float-right">Cantidad de palabras</div>-->
-							<!--<div class="badge background-success float-right mr-1">5 Complete</div>-->
 							<div class="clearfix"></div>
 						</div>
 						<div class="card-block progress-bars">
@@ -129,42 +128,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!--Dashboard-->
-			<h5>Dashboard</h5><a class="anchor" name="dashboard"></a>
-			<div class="row grid-responsive">
-				<div class="column column-50">
-					<div class="card">
-						
-						<div class="card-title">
-							<h2>Espacio para dashboard</h2>
-						</div>
-						<div class="card-block">
-							<!--
-							<div class="canvas-wrapper">
-								<canvas class="chart" id="line-chart" height="auto" width="auto"></canvas>
-							</div>
-							-->
-						</div>
-						
-					</div>
-				</div>
-				<div class="column column-50">
-					<div class="card">
-						
-						<div class="card-title">
-							<h2>Espacio para dashboard</h2>
-						</div>
-						<div class="card-block">
-							<!--
-							<div class="canvas-wrapper">
-								<canvas class="chart" id="bar-chart" height="auto" width="auto"></canvas>
-							</div>
-							-->
-						</div>
-					</div>
-				</div>
-			</div>
 			
 			<!--Usuarios-->
 			<h5 class="mt-2">Usuarios</h5><a class="anchor" name="forms"></a>
@@ -177,7 +140,7 @@
 						<div class="card-block">
 							<form action="insertar_user.php" method="post">
 								<fieldset>
-									<label for="nameField">Nombre</label>
+									<label for="">Nombre</label>
 									<input type="text" placeholder="Nombre de usuario" id="nameField" name="user">
 									<label for="ageRangeField">Contraseña</label>
 									<input type="password" placeholder="Ingrese su contraseña" id="nameField" name="pass">
@@ -223,7 +186,7 @@
 										<td><?php echo $mostrar['Contraseña'] ?></td>
 										<td><?php echo $mostrar['email'] ?></td>
 										<td><?php echo $mostrar['usuario_activo'] ?></td>
-										<td><button class="button button-outline">Modificar</button></td>
+										<td><a class="button button-outline" href="abrir_usuarios.php?id=<?php echo $mostrar['Id_usuario'] ?>&nombre=<?php echo $mostrar['Usuario'] ?>&pass=<?php echo $mostrar['Contraseña'] ?>&mail=<?php echo $mostrar['email'] ?>">Modificar</a></td>
 									</tr>
 									<?php
 										}
@@ -259,7 +222,7 @@
 						<div class="card-block">
 							<form action="insertar_palabra.php" method="post">
 								<fieldset>
-									<label for="nameField">Idioma</label>
+									<label for="">Idioma</label>
 									<select name="combo">
 										<?php
 											include('db.php');
@@ -274,13 +237,13 @@
 										?>
 									</select>
 									
-									<label for="nameField">Palabra</label>
+									<label for="">Palabra</label>
 									<input type="text" placeholder="Palabra en dialecto" id="nameField" name="palabra">
 
-									<label for="nameField">Traducción</label>
+									<label for="">Traducción</label>
 									<input type="text" placeholder="Palaba en español" id="nameField" name="traduccion">
 
-									<input type="submit" class="button">
+									<input type="submit" class="button" value="Agregar palabra">
 								</fieldset>
 							</form>
 						</div>
@@ -297,8 +260,7 @@
 									<tr>
 										<th>Clave Idioma</th>
 										<th>Idioma</th>
-										<th>Palabras</th>
-										<th>Acciones</th>
+										<th>Accion</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -312,8 +274,7 @@
 									<tr>
 										<td><?php echo $mostrar['Id_dialecto'] ?></td>
 										<td><?php echo $mostrar['Dialecto'] ?></td>
-										<td></td>
-										<td><input type="checkbox" id="btn-modal"><label for="btn-modal" class="lbl-modal">Mostrar diccionario</label></td>
+										<td><a class="button button-outline" href="abrir_diccionario.php?id=<?php echo$mostrar['Id_dialecto']?>&id_captura=<?php echo$mostrar['Id_dialecto']?>">Mostrar diccionario</a></td>
 									</tr>
 									<?php
 										}
@@ -326,25 +287,6 @@
 			</div>
 		</section>
 	</div>
-	
-
-	<!-- Modal <button class="button button-outline" >Mostrar diccionario</button> -->
-	
-	
-	<div class="modal">
-
-		<div class="contenedor">
-
-			<header>Mostrar palabras</header>
-			<label for="btn-modal">X</label>
-			<div class="contenido">
-
-			</div>
-
-		</div>
-
-	</div>
-
 	<script src="javascript/chart.min.js"></script>
 	<script src="javascript/chart-data.js"></script>		
 </div>
