@@ -12,10 +12,14 @@
 }
 
 mat-card-title,
-mat-card-content{
+mat-card-content, table{
     display: flex;
     justify-content: center;
     
+}
+
+tr{
+   margin-right: 30px; 
 }
 
 button{
