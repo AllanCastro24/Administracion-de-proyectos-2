@@ -6,6 +6,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [
     IdiomasComponent
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     MatCardModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   exports: [
     IdiomasComponent

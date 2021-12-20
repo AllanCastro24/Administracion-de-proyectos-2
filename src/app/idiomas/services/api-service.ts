@@ -9,6 +9,8 @@ import { environment } from "src/environments/environment";
 export class ApiService {
 
     baseUrl = environment.baseUlr;
+    diccionario = environment.diccionario;
+    traductor = environment.traduccion;
 
     constructor(public http:HttpClient) { }
 
@@ -17,10 +19,10 @@ export class ApiService {
     }
     
     getDiccionario(){
-        return this.http.get<any>(this.baseUrl)
+        return this.http.get<any>(this.diccionario)
     }
     
-    getTraduccion(){
-        return this.http.get<any>(this.baseUrl)
+    getTraduccion(palabra:string){
+        return this.http.get<any>(`${this.traductor}?word=${palabra}`)
     }
 }

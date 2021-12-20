@@ -1,28 +1,26 @@
   <mat-card>
       <mat-card-content>
 
-          <form>
+          <form [formGroup] = "traductor_form" (ngSubmit)="prueba()">
 
             <p>
-              <button mat-flat-button color="basic">Idioma</button>
+              <button type="submit" mat-flat-button color="basic" >Traducir</button>
             </p>
 
             <p>                
                 <mat-form-field appearance="fill">                
                   <mat-label>Palabra a traducir</mat-label>
-                  <textarea matInput></textarea>
+                  <textarea matInput formControlName="palabra" (keydown)="prueba_dos()"></textarea>
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
                   <mat-label>Traducción</mat-label>
-                  <textarea matInput></textarea>
+                  <textarea matInput formControlName="traduccion" readonly></textarea>
                 </mat-form-field>
             </p>
 
             <p>
-                <button type="submit" mat-raised-button color="primary">Historial</button>  
-                <button type="submit" mat-raised-button color="primary">Guardado</button>
-                <button type="submit" mat-raised-button color="primary">Contribuir</button>
+                <a href="/sesion" mat-raised-button color="primary">Contribuir</a>
              </p>
           </form>
       </mat-card-content>

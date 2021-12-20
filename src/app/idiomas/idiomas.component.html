@@ -3,20 +3,11 @@
   <br>
   <mat-card-title>SELECCIONA EL DIALECTO</mat-card-title>
   <mat-card-content>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr *ngFor="let idiomas of idiomas; index as i">
-              <td><a href="diccionario" mat-raised-button class="cor" color="primary">{{idiomas.dialecto}}</a></td>
-            </tr>
+      
+        <mat-list role="list" class="card-tittle"class="idiomas" >
+          <mat-list-item  *ngFor="let idiomas of idiomas; index as i"><a href="diccionario" mat-raised-button class="cor" color="primary">{{idiomas.dialecto}}</a></mat-list-item>
 
-          </tbody>
-        </table>
+      </mat-list>
     </mat-card-content>
   <!--
   
@@ -28,7 +19,7 @@
         </p>
   </mat-card-content>
   -->
-  <p>
-    <button type="submit" mat-raised-button class = "cor" color="primary">Solicitar lenguaje</button>
+  <p class = "cor">
+    <a href="/sesion" mat-raised-button  color="primary">Solicitar lenguaje</a>
   </p>
 </mat-card>

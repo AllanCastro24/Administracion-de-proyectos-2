@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   baseUlr: 'http://localhost/backend/api.php',
+  diccionario: 'http://localhost/backend/api2.php',
+  traduccion: 'http://localhost/backend/api3.php',
+  
 };
 
 /*

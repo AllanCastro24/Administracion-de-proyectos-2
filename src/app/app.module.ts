@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IdiomasModule } from './idiomas/idiomas.module';
@@ -12,6 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiccionarioComponent } from './diccionario/diccionario.component';
 import { SesionModule } from './sesion/sesion.module';
 import { CrearUserComponent } from './crear-user/crear-user.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,11 @@ import { CrearUserComponent } from './crear-user/crear-user.component';
     DiccionarioModule,
     SesionModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

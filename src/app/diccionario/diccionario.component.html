@@ -5,26 +5,21 @@
             <form>
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Buscar palabra...</mat-label>
-                    <textarea matInput placeholder="Escriba aqui la palabra"></textarea>
+                    <textarea matInput placeholder="Escriba aqui la palabra" [formControl]="filtro"></textarea>
                 </mat-form-field>
                 
                 <p>
-                    <button type="submit" mat-raised-button color="primary">Filtrar</button>
-                    <button type="submit" mat-raised-button color="primary">Ordenar</button>
+                    <button type="button" mat-raised-button color="primary" (click)="filtrado()">Filtrar</button>
+                    <button mat-raised-button color="primary">Quitar filtro</button>
                 </p>
                 
-                <mat-list role="list" class="card-tittle">
-                    <mat-list-item role="listitem">AKLAX  / Enano</mat-list-item>
-                    <mat-list-item role="listitem">AM  / Araña</mat-list-item>
-                    <mat-list-item role="listitem">AAK  / Lengua</mat-list-item>
-                    <mat-list-item role="listitem">AALAK  / Animal doméstico</mat-list-item>
-
+                <mat-list role="list" class="card-tittle" >
+                    <mat-list-item *ngFor="let Aux of Auxiliar; index as i;" role="listitem">{{Aux.dialecto}} : {{Aux.palabra}}  / {{Aux.traduccion}}</mat-list-item>
                 </mat-list>
                 
                 <p>
-                   <button type="submit" mat-raised-button color="primary">Agregar palabra</button>   
-                   <button type="submit" mat-raised-button color="primary">Solicitar validación</button>
-                   <button type="submit" mat-raised-button color="primary">Informar de un error</button>
+                   <a href="/sesion" mat-raised-button color="primary">Solicitar validación</a>
+                   <a href="/sesion" mat-raised-button color="primary">Informar de un error</a>
                 </p>
                 
                 </form>
