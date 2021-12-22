@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUlr: 'http://localhost/backend/api.php',
-  diccionario: 'http://localhost/backend/api2.php',
-  traduccion: 'http://localhost/backend/api3.php',
+  baseUlr: 'https://portal-adiuas.000webhostapp.com/diccionario-traductor/backend/api.php',
+  diccionario: 'https://portal-adiuas.000webhostapp.com/diccionario-traductor/backend/api2.php',
+  traduccion: 'https://portal-adiuas.000webhostapp.com/diccionario-traductor/backend/api3.php',
   
 };
 
