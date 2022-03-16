@@ -30,7 +30,7 @@ export class DiccionarioComponent implements OnInit {
     if(this.filtro.value != null || this.filtro.value != ""){
       console.log(this.filtro.value);
       this.Auxiliar=[];
-      this.Traduccion.filter((u)=>{if(u.palabra==this.filtro.value){this.Auxiliar.push(u)}});
+      this.Traduccion.filter((u)=>{if(u.dialecto==this.filtro.value){this.Auxiliar.push(u)}});
       console.log(this.Auxiliar);
     }else{
       this.Auxiliar = this.Traduccion
